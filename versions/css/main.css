@@ -1,0 +1,229 @@
+/* LAYOUT
+   Border around each div,
+   Gray background on whole page 
+*/
+
+body {
+    background-color: LightGray;
+    font-family: 'Roboto', sans-serif;
+}
+/* div {
+    border: 1px solid Chocolate;
+} */
+
+/* Navigation Section */
+
+.top-navigation {
+	background-color: #fff;
+	position: fixed;
+    left: 0;
+    top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+.content {
+	height: 70px;
+	padding: 0px 15px;
+	margin: 0 auto; 
+	width:970px;
+}
+
+.top-navigation .logo {
+    height: 70px;
+}
+
+.top-navigation .links {
+	float: right;
+    margin-top: 1.7rem;
+}
+
+.top-navigation .links li {
+    display: inline-block;
+    margin-left: 2.5rem;
+    font-family: 'Roboto', sans-serif; 
+	font-size: 16px; 
+	color: #878787; 
+	letter-spacing: 0.03em;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Default state of active in nav */
+.top-navigation .links .active {
+    color: #4c5058;
+    font-weight: 600;
+}
+
+.top-navigation .links li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.instruct {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+/* Photo section below nav */
+
+.introduction {
+	background-image: url("../images/first-background.jpg");
+	background-color:green;
+	background-position: center bottom;
+	background-repeat: no repeat;
+	background-size: cover;
+	height: 56rem;
+}
+
+/* Typography for photo intro below nav */
+
+.introduction h1,
+.introduction h3 {
+    color: lightGray;
+    text-align: center;
+    font-weight: 300;
+}
+.introduction h1 {
+    margin-top: 16rem;
+    font-size: 3.125rem;
+}
+.introduction h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 1.563rem;
+}
+
+/* Button on splash screen */
+
+.big-button {
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 16px 26px;
+    line-height: 1.33;
+    width: 200px;
+    background-color:orange;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.big-button:hover {
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 16px 26px;
+    line-height: 1.33;
+    width: 200px;
+    background-color:red;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* Three Features below hero image */
+
+.features {
+	background-color: lightGray;
+	height: 38rem;
+}
+
+/* Typography for features section */
+
+.features h1,
+.features h3 {
+    color: black;
+    text-align: center;
+    font-weight: 300;
+}
+.features h1 {
+    margin-top: 5rem;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+.features h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 4rem;
+    font-size: 1.563rem;
+    font-weight: 500;
+}
+
+.features-icons {
+	display:block;
+	margin: 0 auto;
+}
+
+.features-icons li {
+	display: inline-block;
+	width: 120px;
+	margin: 0 100px;
+}
+
+.captions li {
+	display: inline-block;
+	width: 318px;
+	
+}
+
+input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
+  -webkit-appearance: none; -moz-appearance: none;
+  display: block;
+  margin: 0 auto;
+  width: 900px; height: 60px;
+  line-height: 40px; font-size: 17px;
+  border: 1px solid lightGray;
+  margin-top: 200px;
+  font-family: 'Roboto', sans-serif;
+  font-size:28px;
+  color: lightGray; 
+  outline:0 none;
+  padding:7px;
+}
+
+/* Style the footer */
+
+.footer {
+    background-color: DarkGray;
+    height: 250px;
+    padding-top: 40px;
+    margin-top: 140px;
+}
+
+.ascii {
+    margin: 0 auto;
+    display: block;
+    width: 630px;
+    margin-top: 150px;
+}
+
+.credits {
+    visibility: visible;
+}
+
+.input-box {
+    margin: 0 auto;
+}
+
+.credits-header {
+  display: block;
+  margin: 0 auto;
+  /* width: 900px; height: 60px; */
+  line-height: 40px; font-size: 17px;
+  /* border: 1px solid lightGray; */
+  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size:42px;
+  text-align: center;
+  color: #424242; 
+}
+
+.shop {
+    visibility: visible;
+}
+
+.list-items {
+  list-style-type: none;
+}
