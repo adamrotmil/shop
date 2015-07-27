@@ -36,7 +36,7 @@ $(document).ready(function() {
 		if (event.which == 13) {
 			$(".list-items-list").append(
 				$('<li><button class="unchecked"></button>' + $('input')
-					.val() + '</li>'));
+					.val() + '<button class="xbox"></button>' + '</li>'));
 		};
 
 
@@ -80,25 +80,46 @@ $(document).on('input', '.clearable', function() {
 // CLEARABLE LIST ITEMS
 //
 //
-$(document).on('click', 'li', function() {
-	console.log("clicked a list item")
-	$(this).closest('li').toggleClass('cleared');
-	$(this).children('button').toggleClass('unchecked checked');
+//$(document).on('click', 'li', function() {
+//	console.log("clicked a list item")
+//	$(this).closest('li').toggleClass('cleared');
+//	$(this).children('button.unchecked').toggleClass('unchecked checked');
+//});
+
+
+
+$(document).on('click', 'button.unchecked', function() {
+	console.log("clicked a checkbox")
+	$(this).toggleClass('unchecked checked');
+});
+
+$(document).on('click', 'button.checked', function() {
+	console.log("clicked a checked box")
+	$(this).toggleClass('unchecked checked');
 });
 
 $(document).on('mouseover', 'li', function() {
 	console.log("mouseover li")
 	$(this).closest('li').toggleClass('hover');
+	$('.xbox').toggleClass('reveal');
 });
 $(document).on('mouseout', 'li', function() {
 	$(this).closest('li').toggleClass('hover');
+	$('.xbox').toggleClass('reveal');
+});
+
+$(document).on('click', 'button.xbox', function() {
+	console.log("clicked an x box");
+	$(this).closest('li').remove();
+	// remove that list item
 });
 
 
 
 // *** BUGS
 //
-//
+// When you remove list items, the toggling on the red box gets stuck
+// Clicking on an LI directly, if it has an effect, cancels out the same effect of checkbox
 // ** OK ** multiple columns in list causes jumping
 // ** OK ** multiple cols. in list when clicked cuts word in half
 // ** OK ** list item when clicked, append next item is duplicated

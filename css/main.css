@@ -187,7 +187,7 @@ input[type=text], input[type=url], input[type=email], input[type=password], inpu
 
 .footer {
     background-color: DarkGray;
-    height: 250px;
+    height: 800px; /* note: toggle class for credits later */
     padding-top: 40px;
     margin-top: 140px;
 }
@@ -251,9 +251,13 @@ input[type=text], input[type=url], input[type=email], input[type=password], inpu
   column-count: 3;
   column-gap: 2.5em;
   column-rule: 1px solid #000;
+  -moz-user-select: none;  /* prevent text selection */
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }  
 li {
-  opacity: 0.6; 
+  opacity: 0.7; 
 }
 .hover {
   opacity: 1.0;
@@ -314,7 +318,22 @@ li {
   background: url(../images/checked.png) no-repeat;
 }
 
+.xbox {
+  display:inline-block;
+  border:0 none;
+  cursor:pointer;
+  outline:none;
+  vertical-align:center;
+  width: 19px;
+  height: 19px;
+  margin-left: 25px;
+  background: url(../images/redx.png) no-repeat;
+  visibility: hidden;
+}
 
+.reveal {
+  visibility: visible;
+}
 
 
 
